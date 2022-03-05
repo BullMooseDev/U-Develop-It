@@ -10,19 +10,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Connect to database
-<<<<<<< HEAD
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    // Your MySQL username,
-    user: 'root',
-    // Your MySQL password
-    password: '',
-    database: 'election'
-  },
-  console.log('Connected to the election database.')
-);
-=======
 const db = mysql.createConnection({
   host: 'localhost',
   // Your MySQL username,
@@ -31,7 +18,6 @@ const db = mysql.createConnection({
   password: '',
   database: 'election'
 });
->>>>>>> feature/parties
 
 // Get all candidates and their party affiliation
 app.get('/api/candidates', (req, res) => {
